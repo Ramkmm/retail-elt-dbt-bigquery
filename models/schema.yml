@@ -3,8 +3,8 @@ version: 2
 sources:
   - name: retail_raw
     tables:
-      - name: orders_raw
-      - name: customers_raw
+      - name: orders.csv
+      - name: customers.csv
 
 models:
   - name: stg_orders

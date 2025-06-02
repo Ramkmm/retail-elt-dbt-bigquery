@@ -4,7 +4,7 @@ retail_elt:
     dev:
       type: bigquery
       method: oauth
-      project: your-gcp-project-id
+      project: retail-elt-dbt-bigquery
       dataset: retail_dbt  # dbt models will be built here
       threads: 4
       timeout_seconds: 300
