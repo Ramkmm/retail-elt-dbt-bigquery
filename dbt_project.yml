@@ -38,5 +38,22 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   retail-elt-dbt-bigquery:
     # Applies to all files under models/example/
-    example:
+    'retail_elt':
       +materialized: table
+      name: 'retail_elt'
+version: '1.0'
+profile: 'retail_elt'
+
+source-paths: ["models"]
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+models:
+  retail_elt:
+    staging:
+      materialized: view
+    intermediate:
+      materialized: ephemeral
+    marts:
+      materialized: table
+

@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: retail_raw
+    tables:
+      - name: orders_raw
+      - name: customers_raw
+
+models:
+  - name: stg_orders
+  - name: stg_customers
+  - name: int_customer_orders
+  - name: customer_lifetime_value

@@ -1,0 +1,11 @@
+retail_elt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: your-gcp-project-id
+      dataset: retail_dbt  # dbt models will be built here
+      threads: 4
+      timeout_seconds: 300
+      location: US
